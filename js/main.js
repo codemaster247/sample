@@ -266,15 +266,40 @@ while (count > 0 ) {
 // console.log(" Multiples: "+ arrayMul(7,5));
 
 
-var dog = {
-  name: "fido",
-  weight: 48,
-  breed: "mixed",
-  loves: "walks",
+// var dog = {
+//   name: "fido",
+//   weight: 48,
+//   breed: "mixed",
+//   loves: "walks",
+// };
+//
+// function loseWeight(dog, amount) {
+//   dog.weight = dog.weight - amount;
+// }
+//
+// console.log(fido.name + " now weighs " + fido.weight);
+
+
+var song = {
+  name: "Wake this way",
+  artist: "Run-D.M.C",
+  minutes: 4,
+  seconds: 3,
+  genre: "Pop",
+  playing: false,
+
+  play: function(){ //assign a function to a property object 
+    if(!this.playing) {
+      this.playing = true;
+      console.log(" Playing " + song.name + " by " + song.artist);
+    }
+  },
+  pause: function() {
+      this.playing = false;
+      console.log("Play a Song !!!");
+  },
 };
 
-function loseWeight(dog, amount) {
-  dog.weight = dog.weight - amount;
-}
 
-console.log(fido.name + " now weighs " + fido.weight);
+
+song.pause();
